@@ -7,34 +7,34 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/bootstrap/dist/css/bootstrap.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/bootstrap/dist/css/bootstrap.min.css') ?>">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/font-awesome/css/font-awesome.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/font-awesome/css/font-awesome.min.css') ?>">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/Ionicons/css/ionicons.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/Ionicons/css/ionicons.min.css') ?>">
   <!-- Theme style -->
-  <link rel="stylesheet" href="<?= site_url('dist/css/AdminLTE.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('dist/css/AdminLTE.min.css') ?>">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="<?= site_url('dist/css/skins/_all-skins.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('dist/css/skins/_all-skins.min.css') ?>">
   <!-- Morris chart -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/morris.js/morris.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/morris.js/morris.css') ?>">
   <!-- jvectormap -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/jvectormap/jquery-jvectormap.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/jvectormap/jquery-jvectormap.css') ?>">
   <!-- Date Picker -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') ?>">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/bootstrap-daterangepicker/daterangepicker.css')?>">
+  <link rel="stylesheet" href="<?= site_url('bower_components/bootstrap-daterangepicker/daterangepicker.css') ?>">
   <!-- bootstrap wysihtml5 - text editor -->
-  <link rel="stylesheet" href="<?= site_url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')?>">
+  <link rel="stylesheet" href="<?= site_url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') ?>">
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
   <!-- fontIconPicker -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/css/jquery.fonticonpicker.min.css')?>" />
-  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/themes/grey-theme/jquery.fonticonpicker.grey.min.css')?>"/>
+  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/css/jquery.fonticonpicker.min.css') ?>" />
+  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/themes/grey-theme/jquery.fonticonpicker.grey.min.css') ?>"/>
   <!-- Font -->
-  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/demo/fontello-7275ca86/css/fontello.css')?>"/>
-  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/demo/icomoon/icomoon.css')?>"/>
+  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/demo/fontello-7275ca86/css/fontello.css') ?>"/>
+  <link rel="stylesheet" href="<?= site_url('bower_components/iconpicker/demo/icomoon/icomoon.css') ?>"/>
 
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -130,47 +130,47 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <?php if($this->session->userdata('logged')) 
-              { ?>                
-                   <img src="<?= site_url('dist/img/user2-160x160.jpg')?>" class="user-image" alt="User Image">      
-               <?php } 
-                    else { ?>                  
-                      <img src="<?= site_url('dist/img/user-default.jpg')?>" class="user-image" alt="User Image">      
-              <?php } ?>
+            <?php if ($this->session->userdata('logged')) { ?>                
+                   <img src="<?= site_url('dist/img/user2-160x160.jpg') ?>" class="user-image" alt="User Image">      
+               <?php 
+            } else { ?>                  
+                      <img src="<?= site_url('dist/img/user-default.jpg') ?>" class="user-image" alt="User Image">      
+              <?php 
+            } ?>
             
               <span class="hidden-xs">
-              <?php if($this->session->userdata('logged')) 
-              { ?>                
+              <?php if ($this->session->userdata('logged')) { ?>                
                     <?php echo $this->session->userdata('userName'); ?>            
-               <?php } 
-                    else { ?>                  
+               <?php 
+            } else { ?>                  
                     Guest       
-              <?php } ?>
+              <?php 
+            } ?>
               </span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-              <?php if($this->session->userdata('logged')) 
-              { ?>                
-                   <img src="<?= site_url('dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image">      
-               <?php } 
-                    else { ?>                  
-                      <img src="<?= site_url('dist/img/user-default.jpg')?>" class="img-circle" alt="User Image">      
-              <?php } ?>
-                <?php if($this->session->userdata('logged')) 
-                { ?>                
+              <?php if ($this->session->userdata('logged')) { ?>                
+                   <img src="<?= site_url('dist/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image">      
+               <?php 
+            } else { ?>                  
+                      <img src="<?= site_url('dist/img/user-default.jpg') ?>" class="img-circle" alt="User Image">      
+              <?php 
+            } ?>
+                <?php if ($this->session->userdata('logged')) { ?>                
                     <p>
                     <?php echo $this->session->userdata('userName'); ?>        
                     <small>Member since Abr. 2018</small>
                     </p>              
-                <?php } 
-                    else { ?>                  
+                <?php 
+              } else { ?>                  
                     <p>
                     Guest
                   <small>Login to exchange items.</small>
                 </p>       
-              <?php } ?>
+              <?php 
+            } ?>
                 
               </li>
               <!-- Menu Body -->
@@ -192,12 +192,14 @@
               <li class="user-footer">              
                   <div class="text-center">                  
                     <a href="#" class="btn btn-primary btn-flat">Profile</a>   
-                      <?php if($this->session->userdata('logged')) { ?>  
-                        <a href="<?=site_url('Exchange/addTrade')?>" class="btn btn-warning btn-flat">Add Trade</a>               
+                      <?php if ($this->session->userdata('logged')) { ?>  
+                        <a href="<?= site_url('Exchange/addTrade') ?>" class="btn btn-warning btn-flat">Add Trade</a>               
                     <a href="<?= site_url('Login/signOut') ?>" class="btn btn-danger btn-flat">Sign out</a>                
-                      <?php } else { ?>                  
+                      <?php 
+                    } else { ?>                  
                     <a href="<?= site_url('Login') ?>" class="btn btn-success btn-flat">Sign in</a>                
-                      <?php } ?>
+                      <?php 
+                    } ?>
                   </div>
              </li>
             </ul>
@@ -212,25 +214,24 @@
     <section class="sidebar">
       <!-- Sidebar user panel -->
 
-      <?php if($this->session->userdata('logged')) { ?>  
+      <?php if ($this->session->userdata('logged')) : ?>  
         <div class="user-panel">
         <div class="pull-left image">
-           <img src="<?= site_url('dist/img/user2-160x160.jpg')?>" class="img-circle" alt="User Image"> 
+           <img src="<?= site_url('dist/img/user2-160x160.jpg') ?>" class="img-circle" alt="User Image"> 
         </div>
         <div class="pull-left info">
           <p>   <?php echo $this->session->userdata('userName'); ?>        </p>
           <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
         </div>
       </div>            
-                      <?php } ?>      
+      <?php endif; ?>
       <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
+      <form action="<?= site_url('Exchange/searchOffers') ?>" method="post" class="sidebar-form">
         <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <input type="text" name="search" class="form-control" placeholder="Search...">
           <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
+            <button type="submit" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+          </span>
         </div>
       </form>
       <!-- /.search form -->
@@ -250,9 +251,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <?php if($this->session->userdata('categories')): ?>
-              <?php foreach($this->session->userdata('categories') AS $row): ?>
-                <li class="active"><a href="<?= site_url('home/listTrades/'.$row->category_id) ?>"><?= $row->category_name ?></a></li>
+            <?php if ($this->session->userdata('categories')) : ?>
+              <?php foreach ($this->session->userdata('categories') as $row) : ?>
+                <li class="active"><a href="<?= site_url('home/listTrades/' . $row->category_id) ?>"><?= $row->category_name ?></a></li>
             <!-- <li class="active"><a href="index.html"><i class="fa fa-car"></i> Car</a></li>
             <li class="active"><a href="index.html"><i class="fa fa-legal"></i> Tools</a></li>
             <li class="active"><a href="index.html"><i class="fa fa-gamepad"></i> Toys</a></li>
@@ -260,10 +261,9 @@
             <li class="active"><a href="index2.html"><i class="fa fa-futbol-o"></i> Sports</a></li> -->
               <?php endforeach; ?>
             <?php endif; ?>
-            <li class="active"><a href="index.html"><span class="icon-display"></span> Teste</a></li>
           </ul>
         </li>
-        <?php if($this->session->userdata('admin')): ?>
+        <?php if ($this->session->userdata('admin')) : ?>
                    <li class=" treeview">
           <a href="#">
             <i class="fa fa-user-secret"></i> <span>Administrator</span>

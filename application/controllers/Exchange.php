@@ -70,4 +70,9 @@ class Exchange extends CI_Controller {
             echo $this->upload->display_errors();
         }
     }
+
+    public function searchOffers(){
+        $data['trades'] = $this->model_trades->findOfferBySearch($this->input->post('search'));
+		$this->load->view('home_view', $data);
+	}
 }

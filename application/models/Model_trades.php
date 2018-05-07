@@ -57,4 +57,18 @@ class Model_trades extends CI_Model {
 
         return FALSE;
     }
+
+    public function findOfferBySearch($search){
+        $this->db->like('trade_title', $search);
+        $this->db->join('trade_pictures', 'trade_id = trade_pic_idtrade', 'left');
+        $this->db->join('categories', 'category_id = trade_id_category', 'left');
+        $this->db->order_by('trade_date_add', 'desc');
+        $offers = $this->db->get('trades');
+
+        if($offers && $offers->num_rows() > 0){
+            return $offers->result();
+        }
+
+        return FALSE;
+    }
 }

@@ -15,8 +15,8 @@
       <?php echo $this->session->userdata('item'); ?>
       <div>
           <div class="row">
-          <?php if($trades){ ?>
-          <?php foreach($trades AS $row){ ?>
+          <?php if ($trades) { ?>
+          <?php foreach ($trades as $row) { ?>
           <div class="col-md-4" style="min-height: 500px;">
               <div class="box box-solid box-primary">
                 <div class="box-header">
@@ -25,7 +25,7 @@
                 <div class="box-body">
                   
                   <!-- <img class="img-responsive pad" src="dist/img/photo2.png" alt="Photo"> -->
-                  <img class="img-responsive pad" src="<?= site_url('dist/img/'.$row->trade_pic_picture); ?>" alt="Photo">
+                  <img class="img-responsive pad" src="<?= site_url('dist/img/' . $row->trade_pic_picture); ?>" alt="Photo">
                 
                 </div><!-- /.box-body -->
                 <strong><i class="fa fa-th-list margin-r-5" style="margin-left:20px;"></i>Description</strong>
@@ -45,17 +45,20 @@
                       </div>
 
                 <!-- <button type="button" class="btn btn-block btn-primary btn-flat" >More info</button> -->
-                <a class="btn btn-block btn-primary btn-flat" href="<?= site_url('Exchange/tradeDetails/'.$row->trade_id) ?>">More info</a>
+                <a class="btn btn-block btn-primary btn-flat" href="<?= site_url('Exchange/tradeDetails/' . $row->trade_id) ?>">More info</a>
               </div><!-- /.box -->
             </div>
-            <?php } ?>
-            <?php } else { ?>
+            <?php 
+          } ?>
+            <?php 
+          } else { ?>
               <div class="container">
                 <div class="row">
                   <p>No trades available</p>
                 </div>
               </div>
-            <?php } ?>
+            <?php 
+          } ?>
             
           </div>
       </div>
